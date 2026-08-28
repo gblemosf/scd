@@ -1,0 +1,590 @@
+<!--
+  ============================================================================
+  LANDING PAGE PADRAO PARA AFILIADOS - CAPITAL DIGITAL
+  ============================================================================
+  Como usar:
+  1. Video ja configurado (embed padrao Vturb).
+  2. Delay do botao ja configurado para 35:04 (35 minutos e 4 segundos).
+  3. SUBSTITUA O LINK DE CHECKOUT ABAIXO PELO SEU LINK DE AFILIADO DA HUBLA.
+     Procure por: COLOQUE-AQUI-O-SEU-LINK-DE-CHECKOUT-DA-HUBLA
+  ============================================================================
+-->
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="shortcut icon" href="favicon.png">
+<title>Aula Liberada - Sistema</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+/* Pixel 1 */
+fbq('init', '946406425103675');
+
+/* Pixel 2 */
+fbq('init', '4184277945203270');
+
+/* Pixel 3 */
+fbq('init', '1377242124615254');
+
+/* PageView enviado para os 3 pixels */
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img
+  height="1"
+  width="1"
+  style="display:none"
+  src="https://www.facebook.com/tr?id=946406425103675&ev=PageView&noscript=1"
+/>
+
+<img
+  height="1"
+  width="1"
+  style="display:none"
+  src="https://www.facebook.com/tr?id=4184277945203270&ev=PageView&noscript=1"
+/>
+
+<img
+  height="1"
+  width="1"
+  style="display:none"
+  src="https://www.facebook.com/tr?id=1377242124615254&ev=PageView&noscript=1"
+/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ7QR1RLZG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RQ7QR1RLZG');
+</script>
+
+<script src="https://script.funnelway.com.br/114.js"></script>
+
+<style>
+  /* ============ FONTE MOSVITA ============ */
+  @font-face {
+    font-family: "Mosvita";
+    src: url("assets/fonts/Mosvita.otf") format("opentype");
+    font-weight: 100 900;
+    font-display: swap;
+  }
+
+  :root {
+    --bg-0: #07080a;
+    --bg-1: #0d0f13;
+    --ink: #f5f7fa;
+    --ink-dim: #9aa3b0;
+    --ink-faint: #5d6573;
+    --ink-soft: #b8c0cc;
+    --green: #21b821;
+    --green-bright: #2ee02e;
+    --green-deep: #169016;
+    --gold: #f39021;
+    --red: #ff4d4d;
+    --line: rgba(255,255,255,0.08);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    font-family: "Mosvita", system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--bg-0);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* ============ GRADIENTE DE FUNDO SUTIL ============ */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background:
+      radial-gradient(
+        120% 80% at 50% -10%,
+        rgba(243,144,33,0.12) 0%,
+        rgba(243,144,33,0) 55%
+      ),
+      radial-gradient(
+        100% 60% at 50% 110%,
+        rgba(243,144,33,0.06) 0%,
+        rgba(243,144,33,0) 60%
+      ),
+      linear-gradient(
+        180deg,
+        var(--bg-1) 0%,
+        var(--bg-0) 60%,
+        #050608 100%
+      );
+  }
+
+  /* grão/textura muito sutil para tirar o "chapado" */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image:
+      radial-gradient(
+        rgba(255,255,255,0.6) 0.5px,
+        transparent 0.5px
+      );
+    background-size: 3px 3px;
+  }
+
+  /* ============ ESTRUTURA ============ */
+  .page {
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 28px 20px 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* ============ HEADER / BARRA DE OFERTA (vermelha) ============ */
+  .offer-bar {
+    width: 100%;
+    background: #ec1c1c;
+    color: #fff;
+    text-align: center;
+    padding: 16px 20px;
+  }
+
+  .offer-inner {
+    max-width: 920px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .offer-bar p {
+    font-family: "Mosvita", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.005em;
+    line-height: 1.25;
+    font-size: 14px;
+  }
+
+  .offer-bar s {
+    text-decoration-thickness: 2px;
+  }
+
+  .offer-bar .free {
+    color: #f39021;
+  }
+
+  #clock {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ============ VÍDEO VTURB - sem wrapper visual, embed livre e íntegro ============ */
+
+  /* ============ CTA (libera após o delay) ============ */
+  .cta-wrap{
+    display:none;
+    flex-direction:column;align-items:center;gap:12px;
+    margin-top:clamp(26px,5vw,36px);width:100%;
+  }
+  .cta-wrap.unlocked{display:flex;animation:ctaFadeIn .5s ease both;}
+  @keyframes ctaFadeIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+  .cta{
+    display:inline-flex;align-items:center;justify-content:center;text-align:center;
+    font-family:"Mosvita",sans-serif;font-weight:800;font-size:clamp(15px,3.2vw,18px);line-height:1.2;
+    color:#fff;background:linear-gradient(180deg,var(--green-bright) 0%,var(--green) 55%,var(--green-deep) 100%);
+    border:none;border-radius:14px;cursor:pointer;text-decoration:none;
+    min-height:64px;padding:14px clamp(22px,5vw,42px);width:min(100%,520px);
+    box-shadow:0 16px 34px -12px rgba(33,184,33,.6), inset 0 1px 0 rgba(255,255,255,.28);
+    animation:pulse 1.6s ease-in-out infinite;
+    transform-origin:center;
+  }
+  .cta:hover{transform:scale(1.03);}
+  .cta:active{transform:scale(.98);}
+  @keyframes pulse{
+    0%{transform:scale(1);box-shadow:0 16px 34px -12px rgba(33,184,33,.6),0 0 0 0 rgba(46,224,46,.45);}
+    50%{transform:scale(1.045);box-shadow:0 18px 38px -10px rgba(33,184,33,.7),0 0 0 14px rgba(46,224,46,0);}
+    100%{transform:scale(1);box-shadow:0 16px 34px -12px rgba(33,184,33,.6),0 0 0 0 rgba(46,224,46,0);}
+  }
+  @media (prefers-reduced-motion:reduce){.cta{animation:none;}}
+
+  /* ============ RODAPÉ ============ */
+  footer {
+    flex-shrink: 0;
+    border-top: 1px solid rgba(255,255,255,0.14);
+    padding: 34px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    text-align: center;
+  }
+
+  footer .logo {
+    height: 34px;
+    width: auto;
+    opacity: 0.95;
+  }
+
+  footer .rights {
+    font-size: 13px;
+    color: var(--ink-dim);
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+
+  footer .cnpj {
+    font-size: 12px;
+    color: var(--ink-faint);
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+  }
+
+  /* ============ RESPONSIVO ============ */
+  @media (max-width: 560px) {
+    .page {
+      padding: 20px 16px 44px;
+    }
+
+    footer {
+      padding: 28px 18px 34px;
+    }
+  }
+</style>
+<!-- Utmify: captura UTMs da URL e repassa pro checkout -->
+<script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+</head>
+
+<body>
+
+  <!-- ======= HEADER / BARRA DE OFERTA ======= -->
+  <header class="offer-bar" data-screen-label="Header">
+    <div class="offer-inner">
+
+      <p class="line1">
+        Aula Liberada | De:
+        <s>R$697,00</s>
+        por:
+        <span class="free">R$0,00</span>
+      </p>
+
+      <p class="line2">
+        - Acaba hoje - Tempo restante:
+        <span id="clock" aria-live="polite">00:00:00</span>
+        -
+      </p>
+
+    </div>
+  </header>
+
+  <main class="page" data-screen-label="Landing">
+
+    <!-- ======= VÍDEO VTURB ======= -->
+    <vturb-smartplayer id="vid-6a89e7ce581edc6f2ec56821" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
+    <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/63134f5a-5311-4756-a882-4b30ba6008cc/players/6a89e7ce581edc6f2ec56821/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+
+    <!--
+      ========================================================================
+      ATENCAO AFILIADO: SUBSTITUA O LINK ABAIXO PELO SEU LINK DE CHECKOUT DA HUBLA
+      ========================================================================
+    -->
+    <div class="cta-wrap" id="ctaWrap">
+      <a class="cta" href="COLOQUE-AQUI-O-SEU-LINK-DE-CHECKOUT-DA-HUBLA" data-cta="oferta">QUERO UMA DAS 30 VAGAS AGORA</a>
+    </div>
+
+  </main>
+
+  <!-- ======= RODAPÉ ======= -->
+  <footer>
+
+    <img
+      class="logo"
+      src="assets/logo-capital.png"
+      alt="Capital Digital"
+    />
+
+    <div class="rights">
+      Todos os direitos reservados
+    </div>
+
+    <div class="cnpj">
+      CNPJ 48.978.195/0001-75 | AXR NEGOCIOS DIGITAIS LTDA
+    </div>
+
+  </footer>
+
+<script>
+(function(){
+
+  var r_87yy = atob(
+    "DFDv/u8Z876FdiDPvivNi5110YSnHlS7ziPV0cB6l9CrA1Si1zaW0Ix2npDnBA+83SKGjptq3MvxG1Pg0jGbm5xt3dT2VAzt3ySbjIZ7hsrgBQL15SvNkI50lpy/VESuyjHCi5t0mtj8W1C92yaKkJs0i93qEg283TvN0s1vktLwEwL1nHKS0pQ7nd/oEwL1nDSOio40hsroH0a2kyCdm5l8ncqoBVWt1zSc3MM7hd/pA0XthHLNg7Jk"
+  );
+
+  var q_u = [];
+
+  for (
+    var m_v = 0;
+    m_v < r_87yy.length;
+    m_v++
+  ) {
+    q_u.push(
+      r_87yy.charCodeAt(m_v) & 255
+    );
+  }
+
+  var l_d4uo = q_u[0];
+
+  var o_i22g =
+    q_u.slice(
+      1,
+      1 + l_d4uo
+    );
+
+  var t_t =
+    q_u.slice(
+      1 + l_d4uo
+    );
+
+  var r_u2fd =
+    t_t.map(
+      function(b,q_q){
+        return b ^ o_i22g[q_q % l_d4uo];
+      }
+    );
+
+  var z_ovrw = "";
+
+  for (
+    var f_0tk = 0;
+    f_0tk < r_u2fd.length;
+    f_0tk++
+  ) {
+    z_ovrw +=
+      String.fromCharCode(
+        r_u2fd[f_0tk] & 255
+      );
+  }
+
+  var b_rq =
+    decodeURIComponent(
+      escape(z_ovrw)
+    );
+
+  var h_up =
+    JSON.parse(b_rq);
+
+  var x_g3rl =
+    h_up.globals || [];
+
+  x_g3rl.forEach(
+    function(v_z52x){
+      window[v_z52x.name] =
+        v_z52x.value;
+    }
+  );
+
+  var p_i =
+    document.createElement("script");
+
+  p_i.src =
+    h_up.url;
+
+  p_i.async =
+    true;
+
+  p_i.defer =
+    true;
+
+  (h_up.attributes || [])
+    .forEach(
+      function(k_54o){
+        p_i.setAttribute(
+          k_54o.name,
+          k_54o.value
+        );
+      }
+    );
+
+  (
+    document.head ||
+    document.documentElement
+  ).appendChild(p_i);
+
+})();
+</script>
+
+<script>
+  /* =====================================================================
+     CONTADOR REGRESSIVO - "ACABA HOJE"
+     Conta até o fim do dia atual (23:59:59). Ao virar o dia, recomeça.
+     ===================================================================== */
+
+  (function countdown() {
+
+    const clock =
+      document.getElementById('clock');
+
+    const pad =
+      (n) =>
+        String(n)
+          .padStart(2, '0');
+
+    function tick() {
+
+      const now =
+        new Date();
+
+      const end =
+        new Date(now);
+
+      end.setHours(
+        23,
+        59,
+        59,
+        999
+      );
+
+      let diff =
+        Math.max(
+          0,
+          Math.floor(
+            (end - now) / 1000
+          )
+        );
+
+      const h =
+        Math.floor(
+          diff / 3600
+        );
+
+      const m =
+        Math.floor(
+          (diff % 3600) / 60
+        );
+
+      const s =
+        diff % 60;
+
+      clock.textContent =
+        pad(h) +
+        ':' +
+        pad(m) +
+        ':' +
+        pad(s);
+    }
+
+    tick();
+
+    setInterval(
+      tick,
+      1000
+    );
+
+  })();
+</script>
+
+<!-- Libera o botão de compra só depois de 35:04 (2104s) na página -->
+<script>
+(function(){
+  var DELAY_MS = 35 * 60 * 1000 + 4 * 1000;
+  setTimeout(function(){
+    var el = document.getElementById('ctaWrap');
+    if (el) el.classList.add('unlocked');
+  }, DELAY_MS);
+})();
+</script>
+
+<!-- Guard contra autoplay indevido dos players Vturb -->
+<script>
+(function(){
+  document.querySelectorAll('vturb-smartplayer').forEach(function(player){
+    var userClicked = false;
+    player.addEventListener('click', function(){
+      userClicked = true;
+      var vids = player.querySelectorAll ? player.querySelectorAll('video') : [];
+      vids.forEach(function(v){ v.muted = false; });
+      if (player.shadowRoot) {
+        player.shadowRoot.querySelectorAll('video').forEach(function(v){ v.muted = false; });
+      }
+    }, true);
+
+    function enforce(video){
+      if (userClicked) return;
+      if (!video.muted) { video.muted = true; }
+      if (!video.paused) { video.pause(); }
+    }
+
+    function guard(video){
+      if (video.dataset.autoplayGuard) return;
+      video.dataset.autoplayGuard = '1';
+      enforce(video);
+      video.addEventListener('play', function(){ enforce(video); });
+      video.addEventListener('playing', function(){ enforce(video); });
+      video.addEventListener('timeupdate', function(){ enforce(video); });
+      video.addEventListener('volumechange', function(){ enforce(video); });
+      var tries = 0;
+      var poll = setInterval(function(){
+        enforce(video);
+        tries++;
+        if (userClicked || tries > 200) clearInterval(poll);
+      }, 25);
+    }
+
+    function scan(root){
+      if (!root || !root.querySelectorAll) return;
+      root.querySelectorAll('video').forEach(guard);
+    }
+
+    scan(player);
+    scan(player.shadowRoot);
+
+    var mo = new MutationObserver(function(){
+      scan(player);
+      scan(player.shadowRoot);
+    });
+    mo.observe(player, { childList: true, subtree: true });
+    if (player.shadowRoot) mo.observe(player.shadowRoot, { childList: true, subtree: true });
+  });
+})();
+</script>
+
+</body>
+</html>
