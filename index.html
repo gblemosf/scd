@@ -208,41 +208,6 @@ src="https://www.facebook.com/tr?id=946406425103675&ev=PageView&noscript=1"
   .showcase-card .sub2{color:var(--ink-faint);font-size:13px;margin-bottom:22px;}
   @media (min-width:700px){.showcase-card{margin:0;}.showcase>.wrap{padding:0 22px;}}
 
-  /* ---------- DEPOIMENTOS EM VÍDEO ---------- */
-  .depoimentos{padding:clamp(30px,5vw,44px) 0;}
-  .video-grid{
-    display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x proximity;
-    padding:6px 22px 14px;margin:0 -22px;max-width:none;
-    -webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none;
-  }
-  .video-grid::-webkit-scrollbar{display:none;}
-  .video-grid > div{
-    flex:0 0 auto;width:min(76vw,300px);scroll-snap-align:center;
-    border-radius:16px;overflow:hidden;
-    border:1px solid rgba(243,144,33,.28);
-    box-shadow:0 0 0 1px rgba(243,144,33,.08), 0 8px 40px -6px rgba(243,144,33,.4);
-  }
-  @media (min-width:600px){.video-grid > div{width:260px;}}
-
-  /* ---------- SETAS DE CARROSSEL ---------- */
-  .carousel-wrap{position:relative;}
-  .carousel-arrow{
-    position:absolute;top:50%;transform:translateY(-50%);
-    width:36px;height:36px;border-radius:50%;
-    background:rgba(10,11,14,.88);border:1px solid rgba(243,144,33,.45);
-    color:#f39021;display:flex;align-items:center;justify-content:center;
-    cursor:pointer;z-index:5;padding:0;
-    box-shadow:0 4px 18px -4px rgba(0,0,0,.65);
-    transition:opacity .2s ease, background .2s ease, transform .2s ease;
-  }
-  .carousel-arrow:hover{background:rgba(243,144,33,.18);}
-  .carousel-arrow:active{transform:translateY(-50%) scale(.94);}
-  .carousel-arrow svg{width:17px;height:17px;}
-  .carousel-arrow.prev{left:4px;}
-  .carousel-arrow.next{right:4px;}
-  .carousel-arrow.is-hidden{opacity:0;pointer-events:none;}
-  @media (max-width:480px){.carousel-arrow{width:30px;height:30px;}.carousel-arrow svg{width:15px;height:15px;}}
-
   /* ---------- RECAP CARD (OFERTA) ---------- */
   .recap{padding:clamp(30px,5vw,48px) 0 clamp(40px,6vw,56px);scroll-margin-top:24px;}
   .recap-card{
@@ -609,32 +574,6 @@ src="https://www.facebook.com/tr?id=946406425103675&ev=PageView&noscript=1"
     </div>
   </section>
 
-  <!-- ============ DEPOIMENTOS EM VÍDEO ============ -->
-  <section class="depoimentos">
-    <div class="wrap">
-      <h2 style="text-align:center;font-size:clamp(20px,4.6vw,30px);font-weight:800;margin-bottom:8px;">Quem já está dentro, fala por si</h2>
-      <p style="text-align:center;color:var(--ink-dim);max-width:560px;margin:0 auto 30px;">Alunos reais do Capital Digital contando como foi aplicar o método.</p>
-      <div class="carousel-wrap">
-        <button class="carousel-arrow prev is-hidden" type="button" aria-label="Depoimento anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 6 9 12 15 18"></polyline></svg></button>
-        <div class="video-grid">
-          <div>
-            <vturb-smartplayer id="vid-6a849ce8a4d48ef3f38abaf9" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
-          </div>
-          <div>
-            <vturb-smartplayer id="vid-6a849ce2c25ad82f79b9b205" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
-          </div>
-          <div>
-            <vturb-smartplayer id="vid-6a849cdcd52b73491ec4a5c5" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
-          </div>
-          <div>
-            <vturb-smartplayer id="vid-6a849cd4ffaacf48857abd29" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
-          </div>
-        </div>
-        <button class="carousel-arrow next" type="button" aria-label="Próximo depoimento"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg></button>
-      </div>
-    </div>
-  </section>
-
   <hr class="divider" />
 
   <!-- ============ OFERTA ============ -->
@@ -852,110 +791,12 @@ src="https://www.facebook.com/tr?id=946406425103675&ev=PageView&noscript=1"
   });
 </script>
 
-<!-- Vturb player scripts -->
-<script type="text/javascript">var s=document.createElement("script");s.src="https://scripts.converteai.net/63134f5a-5311-4756-a882-4b30ba6008cc/players/6a849ce8a4d48ef3f38abaf9/v4/player.js",s.async=!0,document.head.appendChild(s);</script>
-<script type="text/javascript">var s=document.createElement("script");s.src="https://scripts.converteai.net/63134f5a-5311-4756-a882-4b30ba6008cc/players/6a849ce2c25ad82f79b9b205/v4/player.js",s.async=!0,document.head.appendChild(s);</script>
-<script type="text/javascript">var s=document.createElement("script");s.src="https://scripts.converteai.net/63134f5a-5311-4756-a882-4b30ba6008cc/players/6a849cdcd52b73491ec4a5c5/v4/player.js",s.async=!0,document.head.appendChild(s);</script>
-<script type="text/javascript">var s=document.createElement("script");s.src="https://scripts.converteai.net/63134f5a-5311-4756-a882-4b30ba6008cc/players/6a849cd4ffaacf48857abd29/v4/player.js",s.async=!0,document.head.appendChild(s);</script>
-
-<!-- Bloqueia o Smart Autoplay do Vturb em TODOS os players da página (depoimentos e VSL). Cada player só toca
-     depois de um clique real dentro dele mesmo. O Vturb tenta desbloquear áudio no primeiro clique em QUALQUER
-     lugar da página (padrão deles) e às vezes chama play() antes do nosso listener existir, por isso força
-     pause() imediatamente ao detectar o <video> e reforça por alguns segundos via polling. -->
-<script>
-(function(){
-  document.querySelectorAll('vturb-smartplayer').forEach(function(player){
-    var userClicked = false;
-    player.addEventListener('click', function(){
-      userClicked = true;
-      var vids = player.querySelectorAll ? player.querySelectorAll('video') : [];
-      vids.forEach(function(v){ v.muted = false; });
-      if (player.shadowRoot) {
-        player.shadowRoot.querySelectorAll('video').forEach(function(v){ v.muted = false; });
-      }
-    }, true);
-
-    function enforce(video){
-      if (userClicked) return;
-      if (!video.muted) { video.muted = true; }
-      if (!video.paused) { video.pause(); }
-    }
-
-    function guard(video){
-      if (video.dataset.autoplayGuard) return;
-      video.dataset.autoplayGuard = '1';
-      enforce(video);
-      video.addEventListener('play', function(){ enforce(video); });
-      video.addEventListener('playing', function(){ enforce(video); });
-      video.addEventListener('timeupdate', function(){ enforce(video); });
-      video.addEventListener('volumechange', function(){ enforce(video); });
-      var tries = 0;
-      var poll = setInterval(function(){
-        enforce(video);
-        tries++;
-        if (userClicked || tries > 200) clearInterval(poll);
-      }, 25);
-    }
-
-    function scan(root){
-      if (!root || !root.querySelectorAll) return;
-      root.querySelectorAll('video').forEach(guard);
-    }
-
-    scan(player);
-    scan(player.shadowRoot);
-
-    var mo = new MutationObserver(function(){
-      scan(player);
-      scan(player.shadowRoot);
-    });
-    mo.observe(player, { childList: true, subtree: true });
-    if (player.shadowRoot) mo.observe(player.shadowRoot, { childList: true, subtree: true });
-  });
-})();
-</script>
-
-<!-- Setas dos carrosséis (vídeos e prints) -->
-<script>
-(function(){
-  document.querySelectorAll('.carousel-wrap').forEach(function(wrap){
-    var track = wrap.querySelector('.video-grid');
-    var prev = wrap.querySelector('.carousel-arrow.prev');
-    var next = wrap.querySelector('.carousel-arrow.next');
-    if (!track || !prev || !next) return;
-
-    function step(){
-      var card = track.children[0];
-      var cardWidth = card ? card.getBoundingClientRect().width : track.clientWidth * 0.8;
-      var gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || 14);
-      return cardWidth + gap;
-    }
-
-    function updateArrows(){
-      var max = track.scrollWidth - track.clientWidth - 24;
-      prev.classList.toggle('is-hidden', track.scrollLeft <= 24);
-      next.classList.toggle('is-hidden', track.scrollLeft >= max);
-    }
-
-    prev.addEventListener('click', function(){
-      track.scrollBy({ left: -step(), behavior: 'smooth' });
-    });
-    next.addEventListener('click', function(){
-      track.scrollBy({ left: step(), behavior: 'smooth' });
-    });
-    track.addEventListener('scroll', updateArrows, { passive: true });
-    window.addEventListener('resize', updateArrows);
-    updateArrows();
-  });
-})();
-</script>
-
 <!-- Animação sutil ao rolar -->
 <script>
 (function(){
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var targets = document.querySelectorAll(
-    'main > section, main > .foto-bloco, main > .mockup-bloco, .duvidas, .passo, .compare-row, .video-grid > div'
+    'main > section, main > .foto-bloco, main > .mockup-bloco, .duvidas, .passo, .compare-row'
   );
   if (reduceMotion || !('IntersectionObserver' in window)) {
     targets.forEach(function(el){ el.classList.add('reveal', 'visible'); });
