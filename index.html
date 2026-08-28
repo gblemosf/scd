@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Capital Digital | Sistema de Renda Autônoma</title>
+<meta name="description" content="O sistema com IA que escaneia o mercado, modela a oferta que já vende e monta a estrutura pra você vender todos os dias na internet." />
+<link rel="icon" href="assets/img/favicon.png" type="image/png" />
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '946406425103675');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=946406425103675&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ7QR1RLZG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RQ7QR1RLZG');
+</script>
+
+  <script src="https://script.funnelway.com.br/114.js"></script>
+
+<!-- Utmify: captura UTMs da URL e repassa pro checkout -->
+<script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+
+<style>
+  /* ---------- FONTE ---------- */
+  @font-face { font-family:"Mosvita"; src:url("assets/fonts/Mosvita-Regular.otf") format("opentype"); font-weight:400; font-display:swap; }
+  @font-face { font-family:"Mosvita"; src:url("assets/fonts/Mosvita-SemiBold.otf") format("opentype"); font-weight:600; font-display:swap; }
+  @font-face { font-family:"Mosvita"; src:url("assets/fonts/Mosvita-Bold.otf") format("opentype"); font-weight:700; font-display:swap; }
+  @font-face { font-family:"Mosvita"; src:url("assets/fonts/Mosvita-ExtraBold.otf") format("opentype"); font-weight:800; font-display:swap; }
+  @font-face { font-family:"Mosvita"; src:url("assets/fonts/Mosvita.otf") format("opentype"); font-weight:100 900; font-display:swap; }
+
+  :root{
+    --bg-0:#07080a;
+    --bg-1:#0d0f13;
+    --ink:#f5f7fa;
+    --ink-dim:#b7bfca;
+    --ink-soft:#8d96a3;
+    --ink-faint:#5d6573;
+    --gold:#f39021;
+    --gold-soft:#f7a94d;
+    --green:#21b821;
+    --green-bright:#2ee02e;
+    --green-deep:#169016;
+    --red:#ec1c1c;
+    --card:rgba(255,255,255,0.04);
+    --line:rgba(255,255,255,0.09);
+    --line-soft:rgba(255,255,255,0.06);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Mosvita",system-ui,-apple-system,sans-serif;
+    background:var(--bg-0);color:var(--ink);
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+    line-height:1.55;overflow-x:hidden;position:relative;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-2;
+    background:#000;
+  }
+  img{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+
+  .wrap{width:100%;max-width:760px;margin:0 auto;padding:0 22px;}
+
+  /* ---------- LOGO TOPO ---------- */
+  .topbar{display:flex;justify-content:center;padding:22px 0 0;}
+  .topbar img{height:22px;width:auto;opacity:.95;}
+
+  /* ---------- VSL ---------- */
+  .vsl-bloco{padding:clamp(24px,5vw,36px) 0 clamp(8px,2vw,14px);text-align:center;}
+  .vsl-bloco h1{
+    font-size:clamp(22px,5vw,32px);font-weight:800;line-height:1.22;letter-spacing:-.01em;
+    max-width:640px;margin:0 auto clamp(20px,4vw,26px);text-wrap:balance;
+  }
+  .vsl-bloco h1 .hl{color:var(--gold);}
+  .vsl-embed{max-width:420px;margin:0 auto;}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;text-align:center;padding:clamp(22px,5vw,34px) 0 clamp(44px,7vw,60px);overflow:hidden;}
+  .covers{position:relative;display:flex;justify-content:center;align-items:flex-end;height:clamp(170px,34vw,260px);margin-bottom:clamp(28px,5vw,40px);}
+  .covers img{
+    position:absolute;bottom:0;width:clamp(108px,21vw,160px);border-radius:10px;
+    border:1px solid var(--line);box-shadow:0 18px 40px -16px rgba(0,0,0,.85);
+  }
+  .covers img:nth-child(1){transform:translateX(-190%) rotate(-9deg);bottom:14px;opacity:.85;}
+  .covers img:nth-child(2){transform:translateX(-98%) rotate(-5deg);bottom:7px;}
+  .covers img:nth-child(3){transform:none;z-index:3;width:clamp(122px,24vw,180px);}
+  .covers img:nth-child(4){transform:translateX(98%) rotate(5deg);bottom:7px;}
+  .covers img:nth-child(5){transform:translateX(190%) rotate(9deg);bottom:14px;opacity:.85;}
+  .hero h1{
+    font-size:clamp(26px,5.8vw,42px);font-weight:800;line-height:1.16;letter-spacing:-.01em;
+    max-width:680px;margin:0 auto;text-wrap:balance;
+  }
+  .hero h1 .hl{color:var(--gold);}
+  .hero .sub{
+    color:var(--ink-dim);font-size:clamp(15px,3.2vw,18px);font-weight:500;
+    max-width:560px;margin:18px auto 0;text-wrap:pretty;
+  }
+  @media (max-width:480px){
+    .covers img:nth-child(1),.covers img:nth-child(5){display:none;}
+    .covers img:nth-child(2){transform:translateX(-78%) rotate(-6deg);}
+    .covers img:nth-child(4){transform:translateX(78%) rotate(6deg);}
+  }
+
+  /* ---------- CARTA (texto corrido) ---------- */
+  .bloco{padding:clamp(26px,5vw,40px) 0;text-align:center;}
+  .bloco h2{
+    font-size:clamp(20px,4.6vw,30px);font-weight:800;line-height:1.22;letter-spacing:-.01em;
+    margin-bottom:clamp(16px,3vw,22px);text-wrap:balance;
+  }
+  .bloco h2 .hl{color:var(--gold);}
+  .bloco p{
+    color:var(--ink-dim);font-size:clamp(15px,3.2vw,17px);line-height:1.65;
+    max-width:620px;margin:0 auto 14px;text-wrap:pretty;
+  }
+  .bloco p:last-child{margin-bottom:0;}
+  .bloco p strong{color:#fff;font-weight:700;}
+  .bloco p .hl{color:var(--gold);font-weight:700;}
+  .bloco p .gr{color:var(--green-bright);font-weight:700;}
+
+  .divider{border:none;border-top:1px solid var(--line-soft);max-width:280px;margin:0 auto;}
+
+  /* foto autor */
+  .foto-bloco{display:flex;justify-content:center;padding:clamp(8px,2vw,16px) 0;}
+  .foto-bloco .frame{
+    position:relative;width:min(100%,420px);border-radius:16px;overflow:hidden;
+    border:1px solid var(--line);box-shadow:0 30px 70px -30px rgba(0,0,0,.9);
+  }
+  .foto-bloco img{width:100%;height:auto;}
+  .foto-bloco .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,8,10,.45),transparent 45%);}
+  .foto-bloco .frame.print{width:min(100%,460px);background:#fff;}
+  .foto-bloco .frame.print::after{background:none;}
+  .foto-caption{margin-top:12px;font-size:13px;color:var(--ink-faint);font-weight:600;letter-spacing:.02em;}
+
+  /* mockup de dispositivos */
+  .mockup-bloco{display:flex;justify-content:center;margin:clamp(18px,4vw,30px) auto;}
+  .mockup-bloco img{width:min(100%,680px);height:auto;}
+
+  /* statement amarelo */
+  .statement{
+    font-size:clamp(16px,3.6vw,20px);font-weight:800;letter-spacing:.02em;text-transform:uppercase;
+    color:var(--gold);max-width:640px;margin:0 auto;line-height:1.45;text-wrap:balance;
+  }
+
+  /* "ou seja" espaçado */
+  .ouseja{
+    font-size:clamp(13px,3vw,15px);font-weight:700;letter-spacing:.5em;text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- BOTÃO CTA ---------- */
+  .cta-wrap{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:clamp(22px,4vw,30px);}
+  .cta{
+    display:inline-flex;align-items:center;justify-content:center;text-align:center;
+    font-family:"Mosvita",sans-serif;font-weight:800;font-size:clamp(15px,3.2vw,18px);line-height:1.2;
+    color:#fff;background:linear-gradient(180deg,var(--green-bright) 0%,var(--green) 55%,var(--green-deep) 100%);
+    border:none;border-radius:14px;cursor:pointer;
+    min-height:64px;padding:14px clamp(22px,5vw,42px);width:min(100%,520px);
+    box-shadow:0 16px 34px -12px rgba(33,184,33,.6), inset 0 1px 0 rgba(255,255,255,.28);
+    animation:pulse 1.9s cubic-bezier(.4,0,.6,1) infinite;
+    transition:transform .12s ease;
+  }
+  .cta:hover{transform:translateY(-1px) scale(1.012);}
+  .cta:active{transform:scale(.987);}
+  @keyframes pulse{
+    0%{box-shadow:0 16px 34px -12px rgba(33,184,33,.6),0 0 0 0 rgba(46,224,46,.5);}
+    70%{box-shadow:0 16px 34px -12px rgba(33,184,33,.6),0 0 0 20px rgba(46,224,46,0);}
+    100%{box-shadow:0 16px 34px -12px rgba(33,184,33,.6),0 0 0 0 rgba(46,224,46,0);}
+  }
+  @media (prefers-reduced-motion:reduce){.cta{animation:none;}}
+  .cta-note{font-size:12.5px;color:var(--ink-soft);font-weight:600;letter-spacing:.04em;}
+
+  /* ---------- BENEFÍCIOS ---------- */
+  .beneficios{padding:clamp(30px,5vw,44px) 0;}
+  .beneficios-list{list-style:none;display:flex;flex-direction:column;gap:16px;max-width:600px;margin:0 auto;text-align:left;}
+  .beneficios-list li{display:flex;gap:14px;align-items:flex-start;}
+  .beneficios-list .ck{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:rgba(46,224,46,.12);color:var(--green-bright);display:grid;place-items:center;margin-top:1px;}
+  .beneficios-list .ck svg{width:14px;height:14px;}
+  .beneficios-list .warn{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:rgba(243,144,33,.12);color:var(--gold);display:grid;place-items:center;margin-top:1px;font-weight:800;font-size:15px;line-height:1;}
+  .beneficios-list p{margin:0;color:var(--ink-dim);font-size:clamp(14.5px,3vw,16.5px);line-height:1.5;}
+  .beneficios-list p strong{color:#fff;font-weight:700;}
+
+  /* ===== showcase (foto de fundo + notificações estilo Hotmart) ===== */
+  .showcase{padding:clamp(8px,2vw,20px) 0 clamp(20px,4vw,34px);}
+  .showcase>.wrap{padding:0;}
+  .showcase-card{
+    position:relative;overflow:hidden;
+    background:#08090b;
+    border:1px solid var(--line);border-radius:18px;
+    box-shadow:0 40px 90px -40px rgba(0,0,0,.95);
+    margin:0 20px;padding:clamp(24px,5vw,40px) 20px;
+    text-align:center;
+  }
+  .showcase-card h3{font-size:clamp(18px,4vw,22px);font-weight:800;margin-bottom:6px;}
+  .showcase-card .num{font-size:clamp(30px,7vw,42px);font-weight:800;color:var(--green-bright);margin:6px 0 4px;}
+  .showcase-card .sub2{color:var(--ink-faint);font-size:13px;margin-bottom:22px;}
+  @media (min-width:700px){.showcase-card{margin:0;}.showcase>.wrap{padding:0 22px;}}
+
+  /* ---------- DEPOIMENTOS EM VÍDEO ---------- */
+  .depoimentos{padding:clamp(30px,5vw,44px) 0;}
+  .video-grid{
+    display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x proximity;
+    padding:6px 22px 14px;margin:0 -22px;max-width:none;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .video-grid::-webkit-scrollbar{display:none;}
+  .video-grid > div{
+    flex:0 0 auto;width:min(76vw,300px);scroll-snap-align:center;
+    border-radius:16px;overflow:hidden;
+    border:1px solid rgba(243,144,33,.28);
+    box-shadow:0 0 0 1px rgba(243,144,33,.08), 0 8px 40px -6px rgba(243,144,33,.4);
+  }
+  @media (min-width:600px){.video-grid > div{width:260px;}}
+
+  /* ---------- SETAS DE CARROSSEL ---------- */
+  .carousel-wrap{position:relative;}
+  .carousel-arrow{
+    position:absolute;top:50%;transform:translateY(-50%);
+    width:36px;height:36px;border-radius:50%;
+    background:rgba(10,11,14,.88);border:1px solid rgba(243,144,33,.45);
+    color:#f39021;display:flex;align-items:center;justify-content:center;
+    cursor:pointer;z-index:5;padding:0;
+    box-shadow:0 4px 18px -4px rgba(0,0,0,.65);
+    transition:opacity .2s ease, background .2s ease, transform .2s ease;
+  }
+  .carousel-arrow:hover{background:rgba(243,144,33,.18);}
+  .carousel-arrow:active{transform:translateY(-50%) scale(.94);}
+  .carousel-arrow svg{width:17px;height:17px;}
+  .carousel-arrow.prev{left:4px;}
+  .carousel-arrow.next{right:4px;}
+  .carousel-arrow.is-hidden{opacity:0;pointer-events:none;}
+  @media (max-width:480px){.carousel-arrow{width:30px;height:30px;}.carousel-arrow svg{width:15px;height:15px;}}
+
+  /* ---------- RECAP CARD (OFERTA) ---------- */
+  .recap{padding:clamp(30px,5vw,48px) 0 clamp(40px,6vw,56px);scroll-margin-top:24px;}
+  .recap-card{
+    background:linear-gradient(180deg,#101319,rgba(13,15,19,.85));
+    border:1px solid var(--line);border-radius:22px;
+    padding:clamp(26px,5vw,44px) clamp(20px,4vw,40px);
+    box-shadow:0 40px 90px -40px rgba(0,0,0,.95), 0 0 0 1px rgba(243,144,33,.07);
+    position:relative;overflow:hidden;
+  }
+  .recap-card::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.6;}
+  .recap-card h2{
+    text-align:center;font-size:clamp(20px,4.4vw,28px);font-weight:800;line-height:1.25;
+    margin-bottom:clamp(22px,4vw,30px);text-wrap:balance;
+  }
+  .recap-card h2 .hl{color:var(--gold);}
+  .recap-list{list-style:none;display:flex;flex-direction:column;}
+  .recap-list li{
+    display:flex;align-items:flex-start;gap:12px;
+    padding:13px 0;border-top:1px solid var(--line-soft);
+    color:var(--ink-dim);font-size:clamp(13.5px,3vw,15.5px);line-height:1.4;text-align:left;
+  }
+  .recap-list li:last-child{border-bottom:1px solid var(--line-soft);}
+  .recap-list .ck{color:var(--green-bright);flex-shrink:0;width:18px;height:18px;display:grid;place-items:center;margin-top:2px;}
+  .recap-list .ck svg{width:15px;height:15px;}
+  .recap-list .item{flex:1;}
+  .recap-list .item b{color:#fff;font-weight:700;}
+  .recap-list .val{font-weight:700;color:var(--ink-soft);white-space:nowrap;margin-top:1px;}
+  .recap-total{
+    text-align:center;margin-top:clamp(24px,4vw,34px);
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .recap-total .t1{font-size:clamp(17px,3.8vw,23px);color:var(--red);font-weight:800;}
+  .recap-total .t1 s{color:var(--red);text-decoration-thickness:2.5px;}
+  .recap-total .sub{font-size:clamp(15px,3.4vw,19px);color:var(--ink-dim);font-weight:600;margin-top:10px;}
+  .recap-total .big{font-size:clamp(36px,9vw,56px);color:#fff;font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-top:2px;}
+  .recap-total .big .n{color:var(--green-bright);}
+  .recap-total .vista{font-size:clamp(15px,3.4vw,19px);color:#fff;font-weight:600;margin-top:2px;}
+  .recap-total .daily{font-size:13px;color:var(--gold-soft);font-weight:600;margin-top:10px;}
+  .recap-card .cta-wrap{margin-top:clamp(24px,4vw,32px);}
+  .garantia-mini{
+    display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px 12px;margin-top:16px;
+    font-size:13px;color:var(--ink-soft);font-weight:600;
+  }
+  .garantia-mini svg{width:17px;height:17px;color:var(--ink-soft);flex-shrink:0;}
+  .garantia-mini span{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;}
+  @media (max-width:560px){
+    .garantia-mini{flex-direction:column;gap:10px;}
+    .garantia-mini span:nth-child(2){display:none;}
+  }
+
+  /* ---------- OBJEÇÕES / GARANTIA ---------- */
+  .objecoes{padding:clamp(30px,5vw,44px) 0;}
+  .obj-list{display:flex;flex-direction:column;gap:18px;max-width:620px;margin:0 auto;text-align:left;}
+  .obj-item{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:18px 20px;}
+  .obj-item .q{font-weight:700;color:#fff;font-size:clamp(14.5px,3vw,16px);margin-bottom:8px;}
+  .obj-item .a{color:var(--ink-dim);font-size:clamp(14px,2.9vw,15.5px);line-height:1.55;}
+
+  .garantia-bloco{padding:clamp(30px,5vw,44px) 0;}
+  .garantia-card{
+    max-width:620px;margin:0 auto;border:1px solid rgba(243,144,33,.25);border-radius:18px;
+    background:rgba(243,144,33,.05);padding:clamp(26px,5vw,36px) clamp(20px,4vw,30px);text-align:center;
+  }
+  .garantia-card .badge{width:56px;height:56px;border-radius:50%;background:rgba(243,144,33,.14);
+    display:grid;place-items:center;margin:0 auto 16px;color:var(--gold);}
+  .garantia-card .badge svg{width:28px;height:28px;}
+  .garantia-card h3{font-size:clamp(18px,4vw,24px);font-weight:800;margin-bottom:14px;}
+  .garantia-card p{color:var(--ink-dim);font-size:clamp(14px,3vw,16px);margin-bottom:12px;}
+  .garantia-card p:last-child{margin-bottom:0;}
+  .garantia-card p strong{color:var(--gold-soft);font-weight:700;}
+
+  /* ---------- FAQ ---------- */
+  .faq{padding:clamp(30px,5vw,44px) 0;}
+  .faq-list{display:flex;flex-direction:column;gap:12px;max-width:640px;margin:0 auto;text-align:left;}
+  .faq-item{border:1px solid var(--line);border-radius:14px;background:var(--card);overflow:hidden;}
+  .faq-item summary{
+    cursor:pointer;list-style:none;padding:16px 44px 16px 18px;font-weight:700;color:#fff;
+    font-size:clamp(14.5px,3vw,16px);position:relative;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{
+    content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);
+    font-size:22px;color:var(--gold);font-weight:400;
+  }
+  .faq-item[open] summary::after{content:"–";}
+  .faq-item .a{padding:0 18px 18px;color:var(--ink-dim);font-size:clamp(14px,2.9vw,15.5px);line-height:1.55;}
+
+  /* ---------- DÚVIDAS / WHATSAPP ---------- */
+  .duvidas{
+    text-align:center;border-top:1px solid var(--line-soft);
+    padding:clamp(40px,7vw,60px) 22px;
+  }
+  .duvidas h3{font-size:clamp(18px,4vw,24px);font-weight:800;letter-spacing:.04em;margin-bottom:12px;}
+  .duvidas p{color:var(--ink-dim);font-size:clamp(14px,3vw,16px);max-width:520px;margin:0 auto 22px;}
+  .btn-wpp{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    font-weight:800;font-size:clamp(13px,3vw,15px);letter-spacing:.06em;text-transform:uppercase;
+    color:#fff;background:linear-gradient(180deg,var(--green-bright),var(--green-deep));
+    border-radius:12px;min-height:54px;padding:0 26px;
+    box-shadow:0 12px 26px -12px rgba(33,184,33,.6);
+    transition:transform .12s ease;
+  }
+  .btn-wpp:hover{transform:scale(1.02);}
+  .btn-wpp svg{width:19px;height:19px;flex-shrink:0;}
+
+  /* ---------- WHATSAPP FLUTUANTE ---------- */
+  .wpp-float{
+    position:fixed;right:18px;bottom:18px;z-index:999;
+    width:58px;height:58px;border-radius:50%;
+    background:linear-gradient(180deg,var(--green-bright),var(--green-deep));
+    display:grid;place-items:center;color:#fff;
+    box-shadow:0 12px 30px -8px rgba(33,184,33,.65);
+    animation:wppPulse 2.4s ease-out infinite;
+  }
+  .wpp-float svg{width:29px;height:29px;}
+  .wpp-float-bubble{
+    position:absolute;right:0;bottom:72px;
+    max-width:190px;white-space:normal;text-align:center;
+    background:#fff;color:#161a12;font-weight:700;font-size:13px;line-height:1.35;
+    padding:10px 14px;border-radius:12px;
+    box-shadow:0 10px 26px -8px rgba(0,0,0,.5);
+    opacity:0;transform:translateY(6px);pointer-events:none;
+    animation:wppBubble 6s ease-in-out 1.4s infinite;
+  }
+  .wpp-float-bubble::after{
+    content:"";position:absolute;right:22px;bottom:-6px;
+    width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;
+    border-top:6px solid #fff;
+  }
+  @keyframes wppPulse{
+    0%{box-shadow:0 12px 30px -8px rgba(33,184,33,.65),0 0 0 0 rgba(46,224,46,.55);}
+    70%{box-shadow:0 12px 30px -8px rgba(33,184,33,.65),0 0 0 16px rgba(46,224,46,0);}
+    100%{box-shadow:0 12px 30px -8px rgba(33,184,33,.65),0 0 0 0 rgba(46,224,46,0);}
+  }
+  @keyframes wppBubble{
+    0%,8%{opacity:0;transform:translateY(6px);}
+    14%,82%{opacity:1;transform:translateY(0);}
+    90%,100%{opacity:0;transform:translateY(6px);}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .wpp-float{animation:none;}
+    .wpp-float-bubble{animation:none;opacity:1;transform:none;}
+  }
+
+  /* ---------- CALLOUT DO NOME DO LOOP (pausa visual clara) ---------- */
+  .loop-callout{
+    max-width:600px;margin:0 auto;
+    background:linear-gradient(180deg,#fff8e6,#fdecc4);
+    border-radius:18px;padding:clamp(22px,4.5vw,30px) clamp(22px,4.5vw,32px);
+    text-align:center;box-shadow:0 24px 60px -24px rgba(0,0,0,.6);
+  }
+  .loop-callout .label{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#a8681a;margin-bottom:8px;}
+  .loop-callout .name{font-size:clamp(22px,5vw,30px);font-weight:800;color:#1a1206;line-height:1.2;margin-bottom:10px;}
+  .loop-callout .sub{font-size:clamp(13.5px,3vw,15.5px);color:#5c4a28;line-height:1.55;}
+
+  /* ---------- COMO FUNCIONA (PASSOS) ---------- */
+  .passos{padding:clamp(30px,5vw,44px) 0;}
+  .passos-list{display:flex;flex-direction:column;gap:18px;max-width:600px;margin:0 auto;text-align:left;}
+  .passo{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;background:var(--card);padding:18px 20px;}
+  .passo .num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:rgba(243,144,33,.14);color:var(--gold);
+    display:grid;place-items:center;font-weight:800;font-size:15px;}
+  .passo .t{font-weight:700;color:#fff;font-size:clamp(14.5px,3vw,16px);margin-bottom:4px;}
+  .passo .d{color:var(--ink-dim);font-size:clamp(13.5px,2.9vw,15px);line-height:1.5;}
+
+  /* ---------- DIFERENCIAL (COMPARAÇÃO, LAYOUT PILL) ---------- */
+  .diferencial{padding:clamp(30px,5vw,44px) 0;}
+  .compare-grid{display:grid;grid-template-columns:1fr;gap:28px;max-width:900px;margin:0 auto;}
+  @media (min-width:760px){.compare-grid{grid-template-columns:1fr 1fr;gap:32px;}}
+  .compare-col h4{text-align:center;font-size:14px;font-weight:800;margin-bottom:16px;text-transform:uppercase;letter-spacing:.04em;}
+  .compare-col.bad h4{color:var(--red);}
+  .compare-col.good h4{color:var(--green-bright);}
+  .compare-col ul{list-style:none;display:flex;flex-direction:column;gap:12px;text-align:left;}
+  .compare-row{
+    display:flex;gap:12px;align-items:center;
+    border:1px solid var(--line);border-radius:14px;background:var(--card);
+    padding:14px 16px;
+  }
+  .compare-row .ic{flex-shrink:0;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;}
+  .compare-row .ic svg{width:14px;height:14px;}
+  .compare-row.bad .ic{background:rgba(236,28,28,.15);color:var(--red);}
+  .compare-row.good .ic{background:rgba(33,184,33,.15);color:var(--green-bright);}
+  .compare-row span{color:var(--ink-dim);font-size:clamp(13.5px,2.9vw,15px);line-height:1.45;}
+
+  /* ---------- CONHEÇA QUEM VAI TE ENSINAR ---------- */
+  .professor{padding:clamp(30px,5vw,44px) 0;}
+  .professor-card{max-width:560px;margin:0 auto;text-align:center;}
+  .professor-card .frame{width:min(100%,300px);margin:0 auto 24px;border-radius:16px;overflow:hidden;
+    border:1px solid var(--line);box-shadow:0 30px 70px -30px rgba(0,0,0,.9);}
+  .professor-card .frame img{width:100%;height:auto;}
+  .professor-card p{color:var(--ink-dim);font-size:clamp(14.5px,3vw,16.5px);line-height:1.6;margin-bottom:14px;}
+  .professor-card p strong{color:#fff;font-weight:700;}
+  .professor-card .signature{width:min(100%,220px);margin:20px auto 0;opacity:.92;}
+
+  /* ---------- ANIMAÇÃO SUTIL AO ROLAR ---------- */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.visible{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none;}
+  }
+
+  /* ---------- RODAPÉ ---------- */
+  footer{
+    border-top:1px solid var(--line-soft);
+    padding:36px 22px 44px;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;
+  }
+  footer .logo{height:32px;width:auto;opacity:.92;}
+  footer .rights{font-size:13px;color:var(--ink-dim);letter-spacing:.04em;font-weight:600;}
+  footer .cnpj{font-size:12px;color:var(--ink-faint);letter-spacing:.03em;line-height:1.6;}
+  footer .cnpj strong{font-weight:700;color:var(--ink-soft);}
+</style>
+</head>
+<body>
+
+<div class="topbar"><img src="assets/img/logo-capital.png" alt="Capital Digital" /></div>
+
+<!-- ============ VSL ============ -->
+<section class="vsl-bloco">
+  <div class="wrap">
+    <h1>Veja como ativar esse <span class="hl">novo Sistema de IA</span> para vender na internet sem aparecer</h1>
+    <div class="vsl-embed">
+      <vturb-smartplayer
+        id="ab-6a8306df5a7c58405c4aafd7"
+        style="display: block; margin: 0 auto; width: 100%;">
+      </vturb-smartplayer>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <h1>Existe um sistema pra vender <span class="hl">todos os dias</span> na internet. E ele não depende de você aparecer.</h1>
+    <p class="sub">Dentro do Capital Digital, uma IA escaneia o mercado, modela a oferta que já vende e monta a estrutura pra você. Você entra, ativa o sistema e ele trabalha por você, todos os dias.</p>
+    <div class="cta-wrap">
+      <a class="cta" href="#oferta">Quero ativar meu sistema</a>
+      <span class="cta-note">Acesso imediato · Garantia dupla de até 30 dias</span>
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <section class="bloco">
+    <div class="wrap">
+      <h2>Você já tentou vender alguma coisa na internet, não é?</h2>
+      <p>Postou, impulsionou, torceu... e quando não aconteceu nada, achou que o problema era você.</p>
+      <p><strong>Não era.</strong></p>
+      <p>O problema é que vender no digital no impulso é loteria. Um Sistema de Renda Autônoma bem montado não é.</p>
+      <p>É uma estrutura que atrai as pessoas certas, apresenta a oferta certa e vende todos os dias, <strong>mesmo quando você não está olhando.</strong></p>
+      <p>É exatamente isso que eu ensino dentro do Capital Digital, do zero ao operacional.</p>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section class="bloco">
+    <div class="wrap">
+      <h2>Se você chegou até aqui, provavelmente já se pegou pensando:</h2>
+    </div>
+    <div class="wrap">
+      <ul class="beneficios-list">
+        <li><span class="warn">!</span><p>"Já testei tanta coisa e nada funcionou de verdade."</p></li>
+        <li><span class="warn">!</span><p>"Não sei nem por onde começar, parece que falta um passo que ninguém me conta."</p></li>
+        <li><span class="warn">!</span><p>"Tenho medo de investir e ficar no prejuízo de novo."</p></li>
+        <li><span class="warn">!</span><p>"Não tenho tempo pra ficar testando oferta atrás de oferta."</p></li>
+        <li><span class="warn">!</span><p>"Vejo gente vendendo todo dia e não entendo o que eu tô fazendo errado."</p></li>
+        <li><span class="warn">!</span><p>"Acho que preciso aparecer, gravar vídeo, viralizar. E eu não quero isso."</p></li>
+      </ul>
+    </div>
+    <div class="wrap" style="margin-top:32px;">
+      <h2 style="font-size:clamp(19px,4.2vw,26px);">E se continuar assim, é bem provável que você também vá:</h2>
+    </div>
+    <div class="wrap">
+      <ul class="beneficios-list">
+        <li><span class="warn">!</span><p>Perder mais um mês tentando adivinhar o que vender.</p></li>
+        <li><span class="warn">!</span><p>Ver gente que começou depois de você vendendo mais.</p></li>
+        <li><span class="warn">!</span><p>Gastar em anúncio sem saber se aquilo vai voltar.</p></li>
+        <li><span class="warn">!</span><p>Continuar de fora, vendo o "certo" sempre um passo à frente.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bloco">
+    <div class="wrap">
+      <h2>O Capital Digital não é <span class="hl">"mais um curso."</span></h2>
+      <p>Não é teoria jogada pra você descobrir o resto sozinho.</p>
+      <p>É o mesmo método que eu uso, com um diferencial: dentro dele existe um <strong>Sistema de Renda Autônoma com IA.</strong></p>
+      <p>Essa IA analisa o mercado por você, encontra as ofertas que já vendem muito, modela e cria tudo: <strong>a oferta, o entregável e a estrutura.</strong></p>
+      <p>Enquanto a maioria passa meses tentando adivinhar o que vender, <strong>você começa com o caminho já traçado.</strong></p>
+      <p>Você não depende da sua imagem, não depende de viralizar e não depende de sorte. Depende de método. E o método vem pronto.</p>
+    </div>
+  </section>
+
+  <!-- ============ COMO FUNCIONA (PASSOS) ============ -->
+  <section class="passos">
+    <div class="wrap">
+      <div class="loop-callout">
+        <div class="label">Isso tem nome</div>
+        <div class="name">Loop da Renda Autônoma</div>
+        <div class="sub">Um ciclo de 4 passos que se repete sozinho, todos os dias, sem você precisar recomeçar do zero a cada oferta nova.</div>
+      </div>
+    </div>
+    <div class="wrap">
+      <h2 style="text-align:center;font-size:clamp(20px,4.6vw,30px);font-weight:800;margin:32px 0 26px;">Como funciona, em 4 passos simples</h2>
+      <div class="passos-list">
+        <div class="passo">
+          <span class="num">1</span>
+          <div><div class="t">A IA escaneia o mercado</div><div class="d">Ela varre o que já está vendendo agora e te mostra as ofertas certas, sem você precisar adivinhar.</div></div>
+        </div>
+        <div class="passo">
+          <span class="num">2</span>
+          <div><div class="t">A IA modela a sua oferta</div><div class="d">Pega o que já funciona lá fora e monta a sua oferta do jeito certo, pronta pra vender.</div></div>
+        </div>
+        <div class="passo">
+          <span class="num">3</span>
+          <div><div class="t">A IA cria o entregável e a estrutura</div><div class="d">Você recebe tudo montado: o produto, a página e a estrutura de venda.</div></div>
+        </div>
+        <div class="passo">
+          <span class="num">4</span>
+          <div><div class="t">Você ativa e o sistema vende por você</div><div class="d">A partir daqui, o sistema trabalha sozinho, todos os dias, mesmo quando você não está olhando.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="beneficios">
+    <div class="wrap">
+      <h2 style="text-align:center;font-size:clamp(20px,4.6vw,30px);font-weight:800;margin-bottom:26px;">O que muda na prática pra você</h2>
+      <ul class="beneficios-list">
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><p><strong>10 módulos completos:</strong> você aprende o passo a passo do zero, sem precisar caçar informação solta ou adivinhar a ordem certa.</p></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><p><strong>IA que escaneia o mercado:</strong> você para de perder tempo (e dinheiro) testando produto atrás de produto sem saber se vai vender.</p></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><p><strong>IA que modela a oferta e cria o entregável:</strong> você não precisa saber "criar do zero" pra ter uma estrutura profissional funcionando.</p></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><p><strong>Suporte 24h com IA:</strong> você nunca fica travado esperando resposta pra continuar avançando, mesmo de madrugada.</p></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><p><strong>Suporte humano em horário comercial:</strong> quando a dúvida é mais complexa, tem gente de verdade te respondendo.</p></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><p><strong>Comunidade Capital Digital:</strong> você para de tentar sozinho e passa a caminhar ao lado de quem já está aplicando o mesmo método.</p></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><p><strong>Atualizações futuras inclusas:</strong> o que você aprende hoje continua valendo amanhã, sem pagar de novo por isso.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ DIFERENCIAL ============ -->
+  <section class="diferencial">
+    <div class="wrap">
+      <h2 style="text-align:center;font-size:clamp(20px,4.6vw,30px);font-weight:800;margin-bottom:26px;">O Capital Digital é diferente do que você já viu por aí</h2>
+      <div class="compare-grid">
+        <div class="compare-col bad">
+          <h4>Curso comum de "ganhar dinheiro online"</h4>
+          <ul>
+            <li class="compare-row bad"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"></path></svg></span><span>Só teoria solta, sem estrutura pronta pra usar.</span></li>
+            <li class="compare-row bad"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"></path></svg></span><span>Te obriga a aparecer, gravar vídeo e virar influenciador.</span></li>
+            <li class="compare-row bad"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"></path></svg></span><span>Sem suporte de verdade quando você trava.</span></li>
+            <li class="compare-row bad"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"></path></svg></span><span>Garantia curta ou nenhuma.</span></li>
+          </ul>
+        </div>
+        <div class="compare-col good">
+          <h4>Capital Digital</h4>
+          <ul>
+            <li class="compare-row good"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span>Sistema com IA que entrega a estrutura pronta pra usar.</span></li>
+            <li class="compare-row good"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span>Não depende da sua imagem nem de viralizar.</span></li>
+            <li class="compare-row good"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span>Suporte 24h com IA e suporte humano de verdade.</span></li>
+            <li class="compare-row good"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span>Garantia dupla: 7 dias incondicional + 30 dias condicional.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ============ PROVA SOCIAL: FATURAMENTO ============ -->
+  <section class="bloco showcase">
+    <div class="wrap">
+      <p style="margin-bottom:22px;">Chega de teoria. Olha só o que esse sistema já gerou, em um único dia:</p>
+    </div>
+    <div class="wrap">
+      <p class="statement" style="margin-top:22px;">Uma única venda recorrente já é capaz de mudar toda a sua história.</p>
+    </div>
+  </section>
+
+  <!-- ============ DEPOIMENTOS EM VÍDEO ============ -->
+  <section class="depoimentos">
+    <div class="wrap">
+      <h2 style="text-align:center;font-size:clamp(20px,4.6vw,30px);font-weight:800;margin-bottom:8px;">Quem já está dentro, fala por si</h2>
+      <p style="text-align:center;color:var(--ink-dim);max-width:560px;margin:0 auto 30px;">Alunos reais do Capital Digital contando como foi aplicar o método.</p>
+      <div class="carousel-wrap">
+        <button class="carousel-arrow prev is-hidden" type="button" aria-label="Depoimento anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 6 9 12 15 18"></polyline></svg></button>
+        <div class="video-grid">
+          <div>
+            <vturb-smartplayer id="vid-6a849ce8a4d48ef3f38abaf9" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
+          </div>
+          <div>
+            <vturb-smartplayer id="vid-6a849ce2c25ad82f79b9b205" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
+          </div>
+          <div>
+            <vturb-smartplayer id="vid-6a849cdcd52b73491ec4a5c5" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
+          </div>
+          <div>
+            <vturb-smartplayer id="vid-6a849cd4ffaacf48857abd29" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
+          </div>
+        </div>
+        <button class="carousel-arrow next" type="button" aria-label="Próximo depoimento"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ============ OFERTA ============ -->
+  <section class="recap" id="oferta">
+    <div class="wrap">
+      <div class="recap-card">
+        <h2>Tudo que você recebe ao entrar <span class="hl">hoje</span> no Capital Digital</h2>
+        <ul class="recap-list">
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span class="item"><b>Acesso imediato aos 10 módulos do Capital Digital</b></span><span class="val">R$297</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span class="item"><b>Sistema de Renda Autônoma (scanner, modelagem e criação)</b></span><span class="val">R$297</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span class="item"><b>Suporte 24h com IA na área de membros exclusiva</b></span><span class="val">R$147</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span class="item"><b>Suporte humano em horário comercial</b></span><span class="val">R$97</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span class="item">Bônus 1: Portal de Dúvidas</span><span class="val">R$97</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span class="item">Bônus 2: Agente de IA para Análise de Campanhas</span><span class="val">R$197</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span class="item">Bônus 3: Comunidade Capital Digital</span><span class="val">R$150</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span class="item">Bônus 4: Todas as atualizações futuras</span><span class="val">R$47</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span class="item">Bônus 5: Imersão Vendendo em 24 horas</span><span class="val">R$97</span></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span class="item">Garantia incondicional de 7 dias + Garantia condicional de 30 dias</span></li>
+        </ul>
+        <div class="recap-total">
+          <div class="t1">Valor total: <s>R$1.426</s></div>
+          <div class="sub">Mas nessa página, você paga apenas:</div>
+          <div class="big">12x de <span class="n">R$30,18</span></div>
+          <div class="vista">ou R$297,00 à vista</div>
+          <div class="daily">Menos de R$1,50 por dia pra ter um sistema completo trabalhando por você.</div>
+        </div>
+        <div class="cta-wrap">
+          <a class="cta" href="https://pay.hub.la/tlSeiZhKhdLY9LcP878q" data-cta="oferta">Quero ativar meu sistema agora</a>
+        </div>
+        <div class="garantia-mini">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>Compra 100% segura</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONHEÇA QUEM VAI TE ENSINAR ============ -->
+  <section class="professor">
+    <div class="wrap">
+      <h2 style="text-align:center;font-size:clamp(20px,4.6vw,30px);font-weight:800;margin-bottom:26px;">Conheça quem vai te ensinar</h2>
+      <div class="professor-card">
+        <p><strong>Gabriel Lemos</strong> é fundador da Gênesis Digital, cofundador do Sistema Capital Digital e estrategista especializado na criação de funis e na construção de ecossistemas digitais.</p>
+        <p>Desde 2020, atua nos bastidores do mercado, transformando o conhecimento de diferentes especialistas em produtos, ofertas e negócios milionários. Ao longo dessa trajetória, participou da construção de ecossistemas de 8 dígitos, desenvolvendo estratégias capazes de transformar conhecimento em operações digitais escaláveis.</p>
+        <p>Depois de anos estruturando funis e construindo negócios ao lado de diferentes especialistas, Gabriel percebeu que pessoas comuns também poderiam vender pela internet — sem que precisassem começar absolutamente tudo do zero.</p>
+        <p>Foi assim que, ao lado de seus sócios, criou o Sistema Capital Digital: um modelo que democratiza o acesso aos produtos, ofertas e estruturas desenvolvidos por eles.</p>
+        <p>Hoje, qualquer pessoa pode utilizar produtos já criados e validados para começar a vender pela internet, sem precisar desenvolver uma oferta própria, depender de viralização ou passar meses tentando descobrir sozinha o que funciona.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OBJEÇÕES ============ -->
+  <section class="objecoes">
+    <div class="wrap">
+      <h2 style="text-align:center;font-size:clamp(20px,4.6vw,30px);font-weight:800;margin-bottom:26px;">Ainda pensando se é pra você?</h2>
+      <div class="obj-list">
+        <div class="obj-item">
+          <div class="q">"Mas eu não tenho tempo pra mais um curso..."</div>
+          <div class="a">Você não precisa de mais tempo, precisa de menos tentativa e erro. A IA faz o scanner e a modelagem por você. O tempo que sobra é só pra executar o que já vem pronto.</div>
+        </div>
+        <div class="obj-item">
+          <div class="q">"Mas eu já tentei outras coisas e não deu certo..."</div>
+          <div class="a">A diferença aqui não é "tentar mais forte". É ter uma estrutura que já funciona por trás de você, em vez de depender só do seu esforço.</div>
+        </div>
+        <div class="obj-item">
+          <div class="q">"Mas eu não tenho dinheiro pra investir agora..."</div>
+          <div class="a">Por isso o Capital Digital sai por 12x de R$30,18. E você tem duas garantias: se não fizer sentido nos primeiros 7 dias, ou se aplicar por 30 dias e não tiver resultado, seu dinheiro volta.</div>
+        </div>
+        <div class="obj-item">
+          <div class="q">"Mas eu não entendo nada de tecnologia ou vendas..."</div>
+          <div class="a">Os 10 módulos te levam do zero ao operacional. E a IA assume justamente as partes técnicas (scanner, modelagem, criação) que mais travam quem tá começando.</div>
+        </div>
+        <div class="obj-item">
+          <div class="q">"Mas e se for só mais um curso vazio?"</div>
+          <div class="a">Não é teoria solta: é o mesmo sistema que já gerou R$5.312 em um único dia, com suporte 24h com IA e suporte humano pra você nunca ficar travado sozinho.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GARANTIA ============ -->
+  <section class="garantia-bloco">
+    <div class="wrap">
+      <div class="garantia-card">
+        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg></div>
+        <h3>Seguro Garantia Dupla</h3>
+        <p><strong>Garantia incondicional de 7 dias:</strong> entrou e sentiu que não é pra você, por qualquer motivo? Devolvo 100% do seu investimento.</p>
+        <p><strong>Garantia condicional de 30 dias:</strong> aplicou o passo a passo durante 30 dias e não teve resultado nenhum? Eu também devolvo.</p>
+        <p>Eu não quero ficar com seu dinheiro e nem te deixar no prejuízo. Se não fizer sentido, você não perde nada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq">
+    <div class="wrap">
+      <h2 style="text-align:center;font-size:clamp(20px,4.6vw,30px);font-weight:800;margin-bottom:26px;">Perguntas frequentes</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Preciso dedicar quanto tempo por dia?</summary>
+          <div class="a">O suficiente pra assistir os módulos no seu ritmo e colocar a IA pra escanear e modelar por você. A maioria consegue avançar com 30 a 60 minutos por dia.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Serve pra quem tá começando do zero?</summary>
+          <div class="a">Sim. Os 10 módulos foram feitos pra levar do zero ao operacional, e o Sistema de Renda Autônoma assume as partes mais técnicas.</div>
+        </details>
+        <details class="faq-item">
+          <summary>E se eu não gostar ou não tiver resultado?</summary>
+          <div class="a">Você tem garantia incondicional de 7 dias e garantia condicional de 30 dias. Nos dois casos, devolvo 100% do seu investimento.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Como funciona o acesso?</summary>
+          <div class="a">Assim que a compra é confirmada, você recebe os dados de acesso à área de membros por e-mail/WhatsApp e já pode começar.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Tem suporte?</summary>
+          <div class="a">Sim: suporte 24h com IA dentro da área de membros e suporte humano em horário comercial.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Quais as formas de pagamento?</summary>
+          <div class="a">Cartão de crédito (em até 12x), Pix ou parcelado em 2 cartões diferentes.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Preciso aparecer ou gravar vídeo?</summary>
+          <div class="a">Não. O sistema não depende da sua imagem, de viralizar ou de sorte. Depende do método.</div>
+        </details>
+        <details class="faq-item">
+          <summary>O conteúdo é atualizado?</summary>
+          <div class="a">Sim, e todas as atualizações futuras já estão inclusas no seu acesso, sem custo adicional.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Funciona pra qualquer nicho ou mercado?</summary>
+          <div class="a">Sim. A IA escaneia o mercado e te mostra as ofertas que já estão vendendo agora, então você não fica preso a um nicho fixo. Ela se adapta ao que está funcionando.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Preciso ter produto ou loja própria?</summary>
+          <div class="a">Não. A própria IA modela e cria o entregável e a estrutura pra você, então você não precisa chegar com nada pronto.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Preciso saber de tráfego pago?</summary>
+          <div class="a">Não é obrigatório pra começar. Os módulos te ensinam do zero, e o suporte 24h com IA mais o suporte humano te ajudam quando a dúvida for mais técnica.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Já tentei antes e não deu certo. Por que dessa vez seria diferente?</summary>
+          <div class="a">Porque dessa vez você não fica tentando adivinhar sozinho: a IA assume as partes que mais travam (scanner, modelagem, criação) e você tem garantia dupla pra testar sem risco.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Tem algum requisito ou idade mínima?</summary>
+          <div class="a">Não. Qualquer pessoa maior de idade, com acesso à internet e um computador ou celular, pode aplicar o método.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ============ CTA FINAL (DOIS CENÁRIOS) ============ -->
+  <section class="bloco">
+    <div class="wrap">
+      <h2>Daqui a 6 meses, onde você quer estar?</h2>
+      <div class="compare-grid" style="margin-top:8px;">
+        <div class="compare-col bad">
+          <h4>Cenário A</h4>
+          <ul>
+            <li class="compare-row bad"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"></path></svg></span><span>Ainda tentando vender no impulso, testando oferta atrás de oferta.</span></li>
+            <li class="compare-row bad"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"></path></svg></span><span>Sem saber por que as vendas não vêm, torcendo pra alguma coisa dar certo.</span></li>
+          </ul>
+        </div>
+        <div class="compare-col good">
+          <h4>Cenário B</h4>
+          <ul>
+            <li class="compare-row good"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span>Com o Sistema de Renda Autônoma rodando, vendendo todos os dias.</span></li>
+            <li class="compare-row good"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span>Protegido por duas garantias, sem depender de sorte ou de imagem.</span></li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:26px;">A diferença entre os dois cenários é a decisão que você toma agora.</p>
+      <div class="cta-wrap">
+        <a class="cta" href="https://pay.hub.la/tlSeiZhKhdLY9LcP878q" data-cta="final">Quero ativar meu sistema agora</a>
+        <span class="cta-note">Acesso imediato · Garantia dupla de até 30 dias</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ DÚVIDAS ============ -->
+<section class="duvidas">
+  <h3>AINDA TEM DÚVIDAS?</h3>
+  <p>Ficou alguma dúvida sobre o Capital Digital? Clique no botão abaixo e fale comigo direto no WhatsApp. Vamos tirar todas as suas dúvidas por lá.</p>
+  <a class="btn-wpp" href="https://wa.me/message/YQPH6BJ7ISPSK1" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.668-1.612-.916-2.207-.241-.579-.486-.5-.668-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.064 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"></path></svg>
+    Dúvidas? Clique aqui
+  </a>
+</section>
+
+<!-- ============ RODAPÉ ============ -->
+<footer>
+  <img class="logo" src="assets/img/logo-capital.png" alt="Capital Digital" />
+  <div class="rights">Todos os direitos reservados</div>
+  <div class="cnpj"><strong>CNPJ 48.978.195/0001-75 | AXR NEGÓCIOS DIGITAIS LTDA</strong></div>
+</footer>
+
+<!-- ============ WHATSAPP FLUTUANTE ============ -->
+<a class="wpp-float" href="https://wa.me/message/YQPH6BJ7ISPSK1" target="_blank" rel="noopener" aria-label="Fale no WhatsApp">
+  <span class="wpp-float-bubble">Dúvidas? Fala comigo</span>
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.668-1.612-.916-2.207-.241-.579-.486-.5-.668-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.064 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"></path></svg>
+</a>
+
+<!-- CTA click tracking -->
+<script>
+  document.querySelectorAll('a[data-cta]').forEach(function(el){
+    el.addEventListener('click', function(){
+      if (window.fbq) { fbq('track', 'InitiateCheckout'); }
+    });
+  });
+</script>
+
+<!-- Vturb player scripts -->
+<script type="text/javascript">var s=document.createElement("script");s.src="https://scripts.converteai.net/63134f5a-5311-4756-a882-4b30ba6008cc/ab-test/6a8306df5a7c58405c4aafd7/player.js",s.async=!0,document.head.appendChild(s);</script>
+<script type="text/javascript">var s=document.createElement("script");s.src="https://scripts.converteai.net/63134f5a-5311-4756-a882-4b30ba6008cc/players/6a849ce8a4d48ef3f38abaf9/v4/player.js",s.async=!0,document.head.appendChild(s);</script>
+<script type="text/javascript">var s=document.createElement("script");s.src="https://scripts.converteai.net/63134f5a-5311-4756-a882-4b30ba6008cc/players/6a849ce2c25ad82f79b9b205/v4/player.js",s.async=!0,document.head.appendChild(s);</script>
+<script type="text/javascript">var s=document.createElement("script");s.src="https://scripts.converteai.net/63134f5a-5311-4756-a882-4b30ba6008cc/players/6a849cdcd52b73491ec4a5c5/v4/player.js",s.async=!0,document.head.appendChild(s);</script>
+<script type="text/javascript">var s=document.createElement("script");s.src="https://scripts.converteai.net/63134f5a-5311-4756-a882-4b30ba6008cc/players/6a849cd4ffaacf48857abd29/v4/player.js",s.async=!0,document.head.appendChild(s);</script>
+
+<!-- Bloqueia o Smart Autoplay do Vturb em TODOS os players da página (depoimentos e VSL). Cada player só toca
+     depois de um clique real dentro dele mesmo. O Vturb tenta desbloquear áudio no primeiro clique em QUALQUER
+     lugar da página (padrão deles) e às vezes chama play() antes do nosso listener existir, por isso força
+     pause() imediatamente ao detectar o <video> e reforça por alguns segundos via polling. -->
+<script>
+(function(){
+  document.querySelectorAll('vturb-smartplayer').forEach(function(player){
+    var userClicked = false;
+    player.addEventListener('click', function(){
+      userClicked = true;
+      var vids = player.querySelectorAll ? player.querySelectorAll('video') : [];
+      vids.forEach(function(v){ v.muted = false; });
+      if (player.shadowRoot) {
+        player.shadowRoot.querySelectorAll('video').forEach(function(v){ v.muted = false; });
+      }
+    }, true);
+
+    function enforce(video){
+      if (userClicked) return;
+      if (!video.muted) { video.muted = true; }
+      if (!video.paused) { video.pause(); }
+    }
+
+    function guard(video){
+      if (video.dataset.autoplayGuard) return;
+      video.dataset.autoplayGuard = '1';
+      enforce(video);
+      video.addEventListener('play', function(){ enforce(video); });
+      video.addEventListener('playing', function(){ enforce(video); });
+      video.addEventListener('timeupdate', function(){ enforce(video); });
+      video.addEventListener('volumechange', function(){ enforce(video); });
+      var tries = 0;
+      var poll = setInterval(function(){
+        enforce(video);
+        tries++;
+        if (userClicked || tries > 200) clearInterval(poll);
+      }, 25);
+    }
+
+    function scan(root){
+      if (!root || !root.querySelectorAll) return;
+      root.querySelectorAll('video').forEach(guard);
+    }
+
+    scan(player);
+    scan(player.shadowRoot);
+
+    var mo = new MutationObserver(function(){
+      scan(player);
+      scan(player.shadowRoot);
+    });
+    mo.observe(player, { childList: true, subtree: true });
+    if (player.shadowRoot) mo.observe(player.shadowRoot, { childList: true, subtree: true });
+  });
+})();
+</script>
+
+<!-- Setas dos carrosséis (vídeos e prints) -->
+<script>
+(function(){
+  document.querySelectorAll('.carousel-wrap').forEach(function(wrap){
+    var track = wrap.querySelector('.video-grid');
+    var prev = wrap.querySelector('.carousel-arrow.prev');
+    var next = wrap.querySelector('.carousel-arrow.next');
+    if (!track || !prev || !next) return;
+
+    function step(){
+      var card = track.children[0];
+      var cardWidth = card ? card.getBoundingClientRect().width : track.clientWidth * 0.8;
+      var gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || 14);
+      return cardWidth + gap;
+    }
+
+    function updateArrows(){
+      var max = track.scrollWidth - track.clientWidth - 24;
+      prev.classList.toggle('is-hidden', track.scrollLeft <= 24);
+      next.classList.toggle('is-hidden', track.scrollLeft >= max);
+    }
+
+    prev.addEventListener('click', function(){
+      track.scrollBy({ left: -step(), behavior: 'smooth' });
+    });
+    next.addEventListener('click', function(){
+      track.scrollBy({ left: step(), behavior: 'smooth' });
+    });
+    track.addEventListener('scroll', updateArrows, { passive: true });
+    window.addEventListener('resize', updateArrows);
+    updateArrows();
+  });
+})();
+</script>
+
+<!-- Animação sutil ao rolar -->
+<script>
+(function(){
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var targets = document.querySelectorAll(
+    'main > section, main > .foto-bloco, main > .mockup-bloco, .duvidas, .passo, .compare-row, .video-grid > div'
+  );
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    targets.forEach(function(el){ el.classList.add('reveal', 'visible'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  targets.forEach(function(el, i){
+    el.classList.add('reveal');
+    el.style.transitionDelay = (i % 3) * 60 + 'ms';
+    io.observe(el);
+  });
+})();
+</script>
+
+</body>
+</html>
