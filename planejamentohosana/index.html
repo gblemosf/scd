@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planejamento Hosana Brandão</title>
+  <style>
+    :root{
+      --bg-1:#2a0e16;
+      --bg-2:#481825;
+      --bg-3:#6d2830;
+      --card:#3a1620cc;
+      --card-border:#8e5e4b55;
+      --text:#f7efe9;
+      --muted:#d7c0b1;
+      --gold:#d6b28a;
+      --gold-soft:#b9926e;
+      --line:#6b3a39;
+      --white-soft:#fff8f4;
+      --shadow:0 18px 48px rgba(0,0,0,.26);
+      --radius:24px;
+      --max:1020px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(180,93,73,.35), transparent 26%),
+        radial-gradient(circle at 85% 15%, rgba(255,185,145,.10), transparent 20%),
+        linear-gradient(180deg, #5b1f29 0%, #34111a 28%, #230b13 58%, #17070d 100%);
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+
+    .bg-arcs{
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:0;
+      opacity:.22;
+      overflow:hidden;
+    }
+    .arc{
+      position:absolute;
+      border:26px solid rgba(22,6,11,.65);
+      border-radius:50%;
+      filter:blur(.3px);
+      transform:translate3d(0,0,0);
+      will-change:transform;
+    }
+    .arc.a1{width:900px;height:900px;left:-180px;top:-210px}
+    .arc.a2{width:1120px;height:1120px;left:40px;top:-320px}
+    .arc.a3{width:1340px;height:1340px;left:280px;top:-390px}
+
+    .floaters{
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:0;
+      overflow:hidden;
+    }
+    .floater{
+      position:absolute;
+      border-radius:999px;
+      background:radial-gradient(circle at 30% 30%, rgba(255,226,195,.35), rgba(191,113,84,.12) 45%, transparent 72%);
+      filter:blur(8px);
+      will-change:transform;
+      opacity:.55;
+      mix-blend-mode:screen;
+    }
+    .f1{width:220px;height:220px;left:6%;top:24%}
+    .f2{width:300px;height:300px;right:8%;top:12%}
+    .f3{width:180px;height:180px;left:72%;top:68%}
+    .f4{width:260px;height:260px;left:10%;top:78%}
+
+    .page{
+      position:relative;
+      z-index:2;
+      width:min(var(--max), calc(100% - 32px));
+      margin:0 auto;
+      padding:28px 0 80px;
+    }
+
+    .hero{
+      position:relative;
+      padding:34px 28px 30px;
+      border:1px solid rgba(214,178,138,.18);
+      border-radius:32px;
+      background:
+        radial-gradient(circle at 15% 18%, rgba(255,255,255,.06), transparent 28%),
+        linear-gradient(180deg, rgba(120,39,47,.62), rgba(44,13,22,.84));
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      isolation:isolate;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.02), transparent 44%),
+        radial-gradient(circle at 88% 50%, rgba(255,214,190,.10), transparent 22%);
+      z-index:-1;
+    }
+
+    .brand-mini{
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:18px;
+      color:var(--gold);
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      font-size:12px;
+      font-weight:700;
+    }
+    .brand-mini .dot{
+      width:10px;height:10px;border-radius:50%;background:var(--gold);
+      box-shadow:0 0 18px rgba(214,178,138,.5);
+    }
+
+    .hero h1{
+      margin:0;
+      max-width:780px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size:clamp(38px, 7vw, 72px);
+      line-height:.96;
+      letter-spacing:-.045em;
+      font-weight:500;
+      color:var(--white-soft);
+    }
+    .hero h1 em{
+      display:block;
+      font-style:italic;
+      color:var(--gold);
+    }
+    .hero p{
+      margin:18px 0 0;
+      max-width:730px;
+      color:var(--muted);
+      line-height:1.7;
+      font-size:14px;
+    }
+
+    .quick-nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin:26px 0 0;
+    }
+    .quick-nav a{
+      color:var(--white-soft);
+      text-decoration:none;
+      padding:12px 16px;
+      border-radius:999px;
+      border:1px solid rgba(214,178,138,.24);
+      background:rgba(255,255,255,.05);
+      backdrop-filter: blur(6px);
+      font-size:13px;
+      font-weight:600;
+      transition:.25s ease;
+    }
+    .quick-nav a:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.08);
+      border-color:rgba(214,178,138,.48);
+    }
+
+    .section{
+      margin-top:34px;
+      padding:24px 0 0;
+    }
+
+    .section-header{
+      margin-bottom:18px;
+      padding:0 6px;
+    }
+
+    .eyebrow{
+      display:block;
+      color:var(--gold);
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      font-weight:800;
+      font-size:11px;
+      margin-bottom:10px;
+    }
+
+    .section-header h2{
+      margin:0;
+      font-size:clamp(28px,4.4vw,40px);
+      line-height:1;
+      letter-spacing:-.04em;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight:500;
+      color:var(--white-soft);
+    }
+
+    .section-header p{
+      margin:12px 0 0;
+      color:var(--muted);
+      max-width:720px;
+      line-height:1.7;
+      font-size:14px;
+    }
+
+    .stack{
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+
+    .card{
+      position:relative;
+      border-radius:24px;
+      padding:22px 20px 20px;
+      border:1px solid var(--card-border);
+      background:
+        linear-gradient(180deg, rgba(89,31,42,.68), rgba(44,14,21,.88));
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .card::after{
+      content:"";
+      position:absolute;
+      left:0;top:0;bottom:0;width:4px;
+      background:linear-gradient(180deg, var(--gold), rgba(214,178,138,.2));
+    }
+
+    .card h3{
+      margin:0 0 12px;
+      font-size:23px;
+      font-weight:700;
+      letter-spacing:-.03em;
+      color:var(--white-soft);
+    }
+
+    .card ul{
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+
+    .card li{
+      position:relative;
+      margin:10px 0 0;
+      padding-left:18px;
+      color:var(--muted);
+      line-height:1.72;
+      font-size:14px;
+    }
+
+    .card li::before{
+      content:"";
+      position:absolute;
+      left:0; top:.72em;
+      width:7px; height:7px;
+      border-radius:50%;
+      background:var(--gold);
+      box-shadow:0 0 12px rgba(214,178,138,.3);
+    }
+
+    .sub{
+      margin-top:10px;
+      padding-top:12px;
+      border-top:1px solid rgba(214,178,138,.10);
+    }
+
+    .sub li{
+      font-size:13px;
+      color:#e5d6cc;
+    }
+
+    .month-tag{
+      display:inline-block;
+      margin:0 0 12px;
+      padding:7px 11px;
+      border-radius:999px;
+      background:rgba(214,178,138,.10);
+      border:1px solid rgba(214,178,138,.18);
+      color:var(--gold);
+      font-size:11px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      font-weight:800;
+    }
+
+    .divider{
+      height:1px;
+      margin:14px 0 8px;
+      background:linear-gradient(90deg, rgba(214,178,138,.24), transparent);
+    }
+
+    .footer-note{
+      margin-top:26px;
+      padding:18px 20px;
+      border-radius:18px;
+      border:1px solid rgba(214,178,138,.12);
+      background:rgba(255,255,255,.04);
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(28px);
+      transition:opacity .7s ease, transform .7s ease;
+    }
+    .reveal.show{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+
+    /* Motion language inspired solely by the reference video's moving elements:
+       slow revolving gilded arcs, drifting points of light and soft moving glows. */
+    .bg-arcs,.floaters{display:none}
+    .motion-scene{
+      position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;
+      contain:paint;
+    }
+    .motion-glow{
+      position:absolute;width:65vw;height:65vw;min-width:400px;min-height:400px;
+      border-radius:50%;filter:blur(70px);opacity:.32;
+      background:radial-gradient(circle,rgba(186,73,73,.45),rgba(150,63,56,.15) 42%,transparent 72%);
+      transform:translate3d(0,0,0);will-change:transform;
+      animation:glowCruise 24s ease-in-out infinite alternate;
+    }
+    .motion-glow.glow-one{top:-25%;left:-14%}
+    .motion-glow.glow-two{
+      bottom:-38%;right:-18%;background:radial-gradient(circle,rgba(199,113,63,.22),transparent 68%);
+      animation-duration:32s;animation-delay:-14s;
+    }
+    .orbit-wrap{
+      position:absolute;
+      left:50%;top:16%;
+      width:min(70vw,720px);aspect-ratio:1;min-width:400px;
+      transform:translate(-50%,-50%);
+      opacity:.5;
+      will-change:transform;
+    }
+    .orbit{
+      position:absolute;inset:0;border-radius:50%;
+      animation:orbitTurn 38s linear infinite;
+    }
+    .orbit.orbit-two{inset:12%;animation-duration:52s;animation-direction:reverse;opacity:.7}
+    .orbit.orbit-three{inset:24%;animation-duration:46s;animation-delay:-12s;opacity:.38}
+    .orbit svg{width:100%;height:100%;display:block;overflow:visible}
+    .orbit path{fill:none;stroke:var(--gold);stroke-width:.8;stroke-linecap:round}
+    .orbit .soft-path{stroke-dasharray:1.5 6;opacity:.43}
+    .wave-lines{
+      position:absolute;top:4%;left:-10%;width:120%;height:65%;
+      opacity:.20;transform:translate3d(0,0,0);will-change:transform;
+    }
+    .wave-lines svg{width:100%;height:100%}
+    .wave-lines path{fill:none;stroke:#d2a376;stroke-width:.55;opacity:.56}
+    .particle-field{position:absolute;inset:0}
+    .spark{
+      position:absolute;width:2px;height:2px;border-radius:50%;
+      background:#efd0a3;box-shadow:0 0 8px 2px rgba(238,179,114,.27);
+      opacity:var(--spark-opacity,.5);
+      animation:starDrift var(--spark-dur,15s) ease-in-out infinite alternate,
+                starTwinkle var(--twinkle-dur,4s) ease-in-out infinite alternate;
+      animation-delay:var(--spark-delay,0s);
+    }
+    .spark.spark-large{width:3px;height:3px;box-shadow:0 0 11px 3px rgba(238,179,114,.35)}
+    @keyframes orbitTurn{to{transform:rotate(360deg)}}
+    @keyframes glowCruise{to{transform:translate3d(10vw,7vh,0) scale(1.18)}}
+    @keyframes starDrift{to{translate:18px -30px}}
+    @keyframes starTwinkle{0%{opacity:.12}100%{opacity:var(--spark-opacity,.7)}}
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .orbit,.motion-glow,.spark{animation:none!important}
+      .reveal{transition:none!important;opacity:1!important;transform:none!important}
+    }
+
+    @media (max-width: 720px){
+      .page{width:min(var(--max), calc(100% - 20px)); padding-top:18px}
+      .hero{padding:24px 18px 22px; border-radius:24px}
+      .section{margin-top:24px}
+      .card{padding:18px 16px 16px; border-radius:20px}
+      .card h3{font-size:20px}
+      .quick-nav a{width:100%; text-align:center}
+      .arc.a1{left:-340px}
+      .arc.a2{left:-170px}
+      .arc.a3{left:40px}
+    }
+
+    @media print{
+      .bg-arcs,.floaters{display:none}
+      body{background:#fff;color:#000}
+      .hero,.card,.footer-note{background:#fff; color:#000; box-shadow:none}
+      .hero h1,.section-header h2,.card h3{color:#000}
+      .hero p,.card li,.section-header p,.footer-note{color:#333}
+      .brand-mini,.eyebrow,.month-tag{color:#7a553c}
+      .quick-nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="motion-scene" aria-hidden="true">
+    <div class="motion-glow glow-one"></div>
+    <div class="motion-glow glow-two"></div>
+    <div class="wave-lines" id="waveLines">
+      <svg viewBox="0 0 1440 700" preserveAspectRatio="none">
+        <path d="M-80 110 C260 0 410 230 760 105 S1260 0 1560 95"/>
+        <path d="M-80 145 C240 32 490 250 780 144 S1270 30 1560 130"/>
+        <path d="M-80 180 C290 82 500 270 800 179 S1250 75 1560 166"/>
+        <path d="M-80 280 C240 150 560 370 830 270 S1260 175 1560 265"/>
+        <path d="M-80 320 C300 210 530 400 840 312 S1230 210 1560 309"/>
+      </svg>
+    </div>
+    <div class="orbit-wrap" id="orbitWrap">
+      <div class="orbit orbit-one"><svg viewBox="0 0 500 500"><path d="M90 95 A220 220 0 1 1 410 405"/><path class="soft-path" d="M410 405 A220 220 0 0 1 90 95"/></svg></div>
+      <div class="orbit orbit-two"><svg viewBox="0 0 500 500"><path d="M100 100 A212 212 0 0 1 404 400"/><path class="soft-path" d="M404 400 A212 212 0 0 1 100 100"/></svg></div>
+      <div class="orbit orbit-three"><svg viewBox="0 0 500 500"><path d="M105 392 A210 210 0 0 1 390 100"/></svg></div>
+    </div>
+    <div class="particle-field" id="particleField"></div>
+  </div>
+
+  <main class="page">
+    <header class="hero reveal">
+      <div class="brand-mini"><span class="dot"></span> Gestora Digital Experience</div>
+      <h1>Planejamento <em>Hosana Brandão</em></h1>
+      <p>
+        Estrutura enxuta, fiel ao mapa original, organizada em duas seções:
+        <strong>Estratégia</strong> e <strong>Calendário</strong>. Todos os blocos
+        foram colocados um abaixo do outro para leitura direta e limpa.
+      </p>
+      <nav class="quick-nav">
+        <a href="#estrategia">Ir para Estratégia</a>
+        <a href="#calendario">Ir para Calendário</a>
+      </nav>
+    </header>
+
+    <section class="section" id="estrategia">
+      <div class="section-header reveal">
+        <span class="eyebrow">Seção 01</span>
+        <h2>Estratégia</h2>
+        <p>Blocos organizados verticalmente, mantendo somente o que aparece no mapa original.</p>
+      </div>
+
+      <div class="stack">
+        <article class="card reveal">
+          <h3>Crescimento de Base | Perpétuo</h3>
+        </article>
+
+        <article class="card reveal">
+          <h3>Ascenção</h3>
+          <ul class="sub">
+            <li>Front Escalado?</li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <h3>Captação para Grupo de Conteúdo</h3>
+          <ul class="sub">
+            <li>Manychat com Delay de 30 minutos após a primeira mensagem de boas vindas</li>
+            <li>CP de RMKT &gt; PDC &gt; Grupo</li>
+            <li>Live Semanal ou Vídeo Conteúdo Semanal | Relacionamento</li>
+            <li>Forms de Pesquisa + Brinde [Ebook 3k]</li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <h3>Social Media + Social Selling</h3>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="calendario">
+      <div class="section-header reveal">
+        <span class="eyebrow">Seção 02</span>
+        <h2>Calendário</h2>
+        <p>Os meses foram mantidos como no planejamento, sem adicionar nada além do que já está no mapa.</p>
+      </div>
+
+      <div class="stack">
+        <article class="card reveal">
+          <span class="month-tag">Novembro</span>
+          <h3>Ascenção temática - Black Friday dia 21 de Novembro</h3>
+          <ul class="sub">
+            <li>Leads Antigos + Alunos Perpétuo + Grupo de Conteudo Gratuito</li>
+          </ul>
+          <div class="divider"></div>
+          <h3>Formação Gestora Próspera | SS + Ascenções</h3>
+          <ul class="sub">
+            <li>Criar Oferta com 1 Mesa Estratégica</li>
+            <li>R$ 3.000,00</li>
+            <li>Formação + 1 Onboarding + 1 Mesa</li>
+          </ul>
+          <div class="divider"></div>
+          <h3>Seja Boss | November último mês</h3>
+        </article>
+
+        <article class="card reveal">
+          <span class="month-tag">Dezembro</span>
+          <h3>Ascenção temática - Especial de Natal | 19 de Dezembro</h3>
+          <ul class="sub">
+            <li>Leads Antigos + Alunos</li>
+          </ul>
+          <div class="divider"></div>
+          <h3>Formação Gestora Próspera | SS + Ascenções</h3>
+        </article>
+
+        <article class="card reveal">
+          <span class="month-tag">Janeiro</span>
+          <h3>Low ticket / Front escalado</h3>
+          <div class="divider"></div>
+          <h3>Lançamento Clássico</h3>
+          <div class="divider"></div>
+          <h3>Formação Gestora Próspera | Somente no Lançamento</h3>
+        </article>
+      </div>
+    </section>
+
+    <div class="footer-note reveal">
+      Conteúdo fiel ao mapa enviado. A mudança feita aqui foi só de apresentação:
+      blocos empilhados, separação em duas seções e direção visual inspirada no print.
+    </div>
+  </main>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const particleField = document.getElementById('particleField');
+    const fragment = document.createDocumentFragment();
+    // Fixed placement: decorative stars remain steady between page loads.
+    let seed = 83917;
+    const rand = () => { seed = (seed * 16807) % 2147483647; return seed / 2147483647; };
+    for (let i = 0; i < 85; i++) {
+      const star = document.createElement('i');
+      star.className = 'spark' + (i % 15 === 0 ? ' spark-large' : '');
+      star.style.left = (rand() * 100).toFixed(2) + '%';
+      star.style.top = (rand() * 100).toFixed(2) + '%';
+      star.style.setProperty('--spark-opacity', (0.25 + rand() * 0.55).toFixed(2));
+      star.style.setProperty('--spark-dur', (11 + rand() * 17).toFixed(1) + 's');
+      star.style.setProperty('--twinkle-dur', (2.5 + rand() * 5.5).toFixed(1) + 's');
+      star.style.setProperty('--spark-delay', (-rand() * 23).toFixed(1) + 's');
+      fragment.appendChild(star);
+    }
+    particleField.appendChild(fragment);
+    if ('IntersectionObserver' in window && !reduceMotion) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {threshold: 0.08, rootMargin: '0px 0px -25px 0px'});
+      revealEls.forEach(el => observer.observe(el));
+    } else {
+      revealEls.forEach(el => el.classList.add('show'));
+    }
+    if (!reduceMotion) {
+      const orbitWrap = document.getElementById('orbitWrap');
+      const waveLines = document.getElementById('waveLines');
+      let scheduled = false;
+      const scrollEffect = () => {
+        if (scheduled) return;
+        scheduled = true;
+        requestAnimationFrame(() => {
+          const y = window.scrollY || 0;
+          orbitWrap.style.transform = `translate(-50%, calc(-50% + ${Math.min(y * 0.10, 220)}px))`;
+          waveLines.style.transform = `translate3d(0, ${Math.min(y * .055, 130)}px, 0)`;
+          scheduled = false;
+        });
+      };
+      window.addEventListener('scroll', scrollEffect, {passive:true});
+      scrollEffect();
+    }
+  </script>
+</body>
+</html>
